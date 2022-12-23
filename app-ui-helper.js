@@ -27,9 +27,7 @@ const renderTodos = () => {
     // register delete button for remove-todo
     const removeTodoButton = todoCard.querySelector("#remove-todo");
     removeTodoButton.addEventListener("click", (event) => {
-      const todo =
-        event.target.parentElement.querySelector(".card-title").innerText;
-      console.log(todo);
+      const todo = event.target.dataset.todoId;
       deleteTodo(todo);
       renderTodos();
     });
